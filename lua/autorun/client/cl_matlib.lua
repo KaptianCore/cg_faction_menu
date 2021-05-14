@@ -78,18 +78,18 @@ function MatLib.Frame(x, y, w, h, title)
         return frame.headerHeight
     end
 
-    local closeButton = vgui.Create("DButton", frame)
-    closeButton:SetPos(frame:GetWide() * 0.9, 0)
-    closeButton:SetSize(frame:GetWide() * 0.1, frame.headerHeight)
-    closeButton:SetText("")
+    -- local closeButton = vgui.Create("DButton", frame)
+    -- closeButton:SetPos(frame:GetWide() * 0.9, 0)
+    -- closeButton:SetSize(frame:GetWide() * 0.1, frame.headerHeight)
+    -- closeButton:SetText("")
 
-    closeButton.Paint = function(s, w, h)
-        draw.SimpleText("x", "matlib.frametitle", w / 2, h * 0.425, MatLib.Colors.FrameTitle, 1, 1)
-    end
+    -- closeButton.Paint = function(s, w, h)
+    --     draw.SimpleText("x", "matlib.frametitle", w / 2, h * 0.425, MatLib.Colors.FrameTitle, 1, 1)
+    -- end
 
-    closeButton.DoClick = function()
-        frame:Close()
-    end
+    -- closeButton.DoClick = function()
+    --     frame:Close()
+    -- end
 
     return frame
 end
@@ -270,9 +270,9 @@ end
 
 -- Reset the theme color back to normal.
 function MatLib.ResetTheme()
-    MatLib.Colors.FrameTop = Color(0, 122, 107)
-    MatLib.Colors.Button = Color(0, 122, 107)
-    MatLib.Colors.ToggleBackgroundOn = Color(0, 122, 107)
+    MatLib.Colors.FrameTop = Color(35, 35, 35)
+    MatLib.Colors.Button = Color(35, 35, 35)
+    MatLib.Colors.ToggleBackgroundOn = Color(63, 63, 63)
 end
 
 -- Sets up Dark Mode.
