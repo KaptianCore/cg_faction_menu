@@ -15,6 +15,9 @@ function MainFacMenu_Create()
 	close_button.DoClick = function()
 		MainFacMenu:SetVisible(false)
 	end
+    MainFacMenu.Paint = function()
+        MainFacMenu.DrawTexturedRect(512, 290, 1536, 70)
+    end
 end
 
 function USFac_Menu_Create ()
