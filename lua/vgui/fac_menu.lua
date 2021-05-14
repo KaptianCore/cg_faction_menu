@@ -28,6 +28,13 @@ local us_menu = {
         self:SetVisible()
         self:MakePopup()
         local x,y = self:GetSize()
+        local button_join = vgui.Create("DButton", self)
+        button_join:SetText("Close")
+        button_join:SetSize(110, 26)
+        button_join:SetPos(125,212)
+        button_join.DoClick = function()
+            self:SetVisible(false)
+        end
         local button_back = vgui.Create("DButton", self)
         button_back:SetText("Close")
         button_back:SetSize(110, 26)
@@ -51,8 +58,15 @@ local taliban_menu = {
         self:SetVisible()
         self:MakePopup()
         local x,y = self:GetSize()
-        local button_bac = vgui.Create("DButton", self)
-        button_bac:SetText("Close")
+        local button_join = vgui.Create("DButton", self)
+        button_join:SetText("Close")
+        button_join:SetSize(110, 26)
+        button_join:SetPos(125,212)
+        button_join.DoClick = function()
+            self:SetVisible(false)
+        end
+        local button_back = vgui.Create("DButton", self)
+        button_back:SetText("Close")
         button_back:SetSize(110, 26)
         button_back:SetPos(125,212)
         button_back.DoClick = function()
@@ -80,6 +94,7 @@ local pla_menu = {
         button_back:SetPos(125,212)
         button_back.DoClick = function()
             self:SetVisible(false)
+            FacMenu_Main:SetVisible(true)
         end
     end,
 
@@ -103,6 +118,7 @@ local ru_menu = {
         button_back:SetPos(125,212)
         button_back.DoClick = function()
             self:SetVisible(false)
+            FacMenu_Main:SetVisible(true)
         end
     end,
 
@@ -120,12 +136,13 @@ local un_menu = {
         self:SetVisible()
         self:MakePopup()
         local x,y = self:GetSize()
-        local button_bac = vgui.Create("DButton", self)
-        button_bac:SetText("Close")
-        button:SetSize(110, 26)
-        button_bac:SetPos(125,212)
-        button.DoClick = function()
+        local button_back = vgui.Create("DButton", self)
+        button_back:SetText("Close")
+        button_back:SetSize(110, 26)
+        button_back:SetPos(125,212)
+        button_back.DoClick = function()
             self:SetVisible(false)
+            FacMenu_Main:SetVisible(true)
         end
     end,
 
@@ -144,11 +161,12 @@ local aus_menu = {
         self:MakePopup()
         local x,y = self:GetSize()
         local button_bac = vgui.Create("DButton", self)
-        button_bac:SetText("Close")
-        button:SetSize(110, 26)
-        button_bac:SetPos(125,212)
-        button.DoClick = function()
+        button_back:SetText("Close")
+        button_back:SetSize(110, 26)
+        button_back:SetPos(125,212)
+        button_back.DoClick = function()
             self:SetVisible(false)
+            FacMenu_Main:SetVisible(true)
         end
     end,
 
